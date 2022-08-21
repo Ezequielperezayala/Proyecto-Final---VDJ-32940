@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    
     [SerializeField] GameObject munition;
     private bool canShoot = true;
     void Start()
@@ -29,7 +30,7 @@ public class Cannon : MonoBehaviour
         {
             canShoot = false;
             Instantiate(munition, transform.position, transform.rotation);
-            Invoke("ResetShoot", 1f);
+            Invoke("ResetShoot", 0.5f);
         }
     }
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Firebolt : MonoBehaviour
 {
     [SerializeField] int Velocidad;
-
     public int Damage;
     [SerializeField]
     [Range(1,5)]
@@ -27,7 +26,7 @@ public class Firebolt : MonoBehaviour
 
     void Movement()
     {
-        transform.position = transform.position + Vector3.forward * Time.deltaTime * Velocidad;
+        transform.Translate(Vector3.forward * Time.deltaTime * Velocidad);
     }
 
     void DestroyBullet()
