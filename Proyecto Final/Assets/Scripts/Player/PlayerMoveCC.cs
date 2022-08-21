@@ -69,14 +69,16 @@ public class PlayerMoveCC : MonoBehaviour
         bool left = Input.GetKeyDown(KeyCode.A);
         bool right = Input.GetKeyDown(KeyCode.D);
         bool jump = Input.GetKeyDown(KeyCode.Space);
+        bool atack = Input.GetKeyDown(KeyCode.E);
 
         if (forward) playerAnimator.SetTrigger("Run");
         if (back) playerAnimator.SetTrigger("RunBack");
         if (left) playerAnimator.SetTrigger("RunLeft");
         if (right) playerAnimator.SetTrigger("RunRight");
         if (jump) playerAnimator.SetTrigger("JumpUp");
+        if (atack) playerAnimator.SetTrigger("Atack");
 
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.E))
         {
             if (!IsAnimation("Idle")) playerAnimator.SetTrigger("Idle");
         }
