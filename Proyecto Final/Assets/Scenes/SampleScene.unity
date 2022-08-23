@@ -33937,7 +33937,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2189708, y: 1}
+    m_SensorSize: {x: 3.1917212, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -36236,8 +36236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemigo: {fileID: 1144028080539786, guid: 186d1f74b625fa744abf8a07b350ce1d, type: 3}
-  StartTime: 1
-  DelayTime: 1.3
+  StartTime: 2.04
+  DelayTime: 10
   Spawn: {fileID: 355972756}
 --- !u!65 &1499313422
 BoxCollider:
