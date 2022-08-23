@@ -263,8 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 1
-  Player: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-  Velocidad: 5.04
+  Velocidad: 5
   SkeletonRuning: {fileID: 95015863764320770}
 --- !u!1 &1147489988858412
 GameObject:
