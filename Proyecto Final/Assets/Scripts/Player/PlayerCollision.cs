@@ -18,6 +18,14 @@ public class PlayerCollision : MonoBehaviour
             Destroy(other.gameObject);
             playerData.Healing(5);
         }
+
+        if (other.tag == "Score")
+        {
+            Debug.Log("tocaste" + other.gameObject.name);
+            Destroy(other.gameObject);
+            GameManager.Score += 5;
+            Debug.Log("Puntuacion =" + GameManager.Score);
+        }
         
     }
 }
