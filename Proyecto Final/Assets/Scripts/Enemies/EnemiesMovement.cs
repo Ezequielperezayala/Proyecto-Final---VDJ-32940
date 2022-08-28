@@ -70,8 +70,12 @@ public class EnemiesMovement : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(detectPoint.transform.position, detectPoint.transform.TransformDirection(Vector3.forward), out hit, Distance))
         {
-            Debug.Log("collision");
-            audioSource.Play();
+            if (hit.transform.CompareTag("Player"))
+            {
+                Debug.Log("collision");
+                audioSource.Play();
+            }
+            
 
         }
     }
