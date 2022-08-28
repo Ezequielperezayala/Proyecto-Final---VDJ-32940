@@ -15,6 +15,12 @@ public class EnemiesMovement : MonoBehaviour
     float Velocidad;
     [SerializeField] Animator SkeletonRuning;
 
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] Transform Point;
+
+    [SerializeField] [Range(5, 10)] float distance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +34,7 @@ public class EnemiesMovement : MonoBehaviour
         {
             case EnemysTypes.Ghost:
                 LookPlayer();
+                GhostRayCasting();
                 break;
             case EnemysTypes.Skeleton:
                 Invoke("ChasePlayer", 3f);
@@ -57,5 +64,24 @@ public class EnemiesMovement : MonoBehaviour
     {
         Quaternion Look = Quaternion.LookRotation(Player.transform.position - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, Look, 3f * Time.deltaTime);
+    }
+
+    void GhostRayCasting()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(Point.position, Point.transform.TransformDirection(Vector3.forward), out hit, distance))
+        {
+            if (hit.transform.CompareTag("Player"))
+            {
+                audioSource.Play();
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Vector3 direction = Point.transform.TransformDirection(Vector3.forward) * distance;
+        Gizmos.DrawRay(Point.position, direction);
     }
 }
