@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    int Live = 50;
+    public void Healing(int Vida)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Live += Vida;
     }
 }
