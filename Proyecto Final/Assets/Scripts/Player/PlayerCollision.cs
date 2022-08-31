@@ -6,7 +6,7 @@ public class PlayerCollision : MonoBehaviour
 {
     PlayerData playerData;
 
-   [SerializeField] WeaponsManager weaponManager;
+    [SerializeField] WeaponsManager weaponManager;
 
     private void Start()
     {
@@ -29,11 +29,13 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Puntuacion =" + GameManager.Score);
         }
 
-        if (other.tag == "Weapons")
+        if (other.gameObject.CompareTag("Weapons"))
         {
             other.gameObject.SetActive(false);
             weaponManager.WeaponsList.Add(other.gameObject);
             weaponManager.WeaponDictionary.Add(other.gameObject.name, other.gameObject);
         }
     }
+
+    
 }
