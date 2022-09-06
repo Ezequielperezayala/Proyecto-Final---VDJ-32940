@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
     private void Start()
     {
         playerData = GetComponent<PlayerData>();
+        HUDManager.HealBar(playerData.HP);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +19,8 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("tocaste" + other.gameObject.name);
             Destroy(other.gameObject);
-            playerData.Healing(5);
+            playerData.Healing(10);
+            HUDManager.HealBar(playerData.HP);
         }
 
         if (other.tag == "Score")
@@ -27,6 +29,7 @@ public class PlayerCollision : MonoBehaviour
             Destroy(other.gameObject);
             GameManager.Score += 5;
             Debug.Log("Puntuacion =" + GameManager.Score);
+            HUDManager.instance.ViewScore("" + GameManager.Score);
         }
 
         if (other.gameObject.CompareTag("Weapons"))
