@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4895306687886140}
   - component: {fileID: 95015863764320770}
-  - component: {fileID: -8664133619790037505}
+  - component: {fileID: -5652751361445817281}
   m_Layer: 0
   m_Name: SkeletonOutlaw_NoArmor - LOD1
   m_TagString: Untagged
@@ -250,7 +250,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-8664133619790037505
+--- !u!114 &-5652751361445817281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,12 +259,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144028080539786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf77833d57e898439f1a481b6716412, type: 3}
+  m_Script: {fileID: 11500000, guid: 805923a0a0612424d9db83e9ddf23411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 1
-  Velocidad: 5
+  enemiesData: {fileID: 11400000, guid: d2acb3dd1cfe1484e93859584921de7b, type: 2}
   SkeletonRuning: {fileID: 95015863764320770}
+  enemiesData: {fileID: 0}
 --- !u!1 &1147489988858412
 GameObject:
   m_ObjectHideFlags: 0

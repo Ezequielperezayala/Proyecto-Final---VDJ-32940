@@ -5486,8 +5486,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35783124, y: 1.699996, z: 0.17484319}
-  m_Center: {x: -0.00000011175871, y: 0.6251217, z: 0}
+  m_Size: {x: 0.19164515, y: 1.1960064, z: 0.17484319}
+  m_Center: {x: 0.0026056767, y: 0.8771165, z: -1.7462762e-15}
 --- !u!1001 &218606378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33082,8 +33082,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.44397965, y: 2.3473363, z: 0.13030726}
-  m_Center: {x: 0.00000023841858, y: 0.85562944, z: -0.000000007450581}
+  m_Size: {x: 0.30690002, y: 1.5785648, z: 0.13030726}
+  m_Center: {x: -0.005742073, y: 1.2400153, z: -0.000000007450576}
 --- !u!1001 &1319873413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35005,6 +35005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -35088,7 +35089,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2272727, y: 1}
+    m_SensorSize: {x: 2.99591, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -36374,6 +36375,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_Radius
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_Center.z
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -36821,8 +36842,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.44397965, y: 2.3473368, z: 0.13030729}
-  m_Center: {x: 0.00000023841858, y: 0.85562867, z: 0.00000011175871}
+  m_Size: {x: 0.31414795, y: 1.7977786, z: 0.13030729}
+  m_Center: {x: -0.0056877136, y: 1.1304078, z: 0.000000111758695}
 --- !u!1001 &1475886948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46355,24 +46376,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1483506528677888, guid: 1e53ab99435b1194a83bb713baff0dd1, type: 3}
   m_PrefabInstance: {fileID: 1274740609}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1847812620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847812619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf77833d57e898439f1a481b6716412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyType: 0
-  Velocidad: 1
-  SkeletonRuning: {fileID: 0}
-  audioSource: {fileID: 1847812621}
-  Point: {fileID: 1394990367}
-  distance: 5
 --- !u!82 &1847812621
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46469,6 +46472,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1847812624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847812619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a7cbf2368f8b448a045d257598dabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesData: {fileID: 11400000, guid: 66cdf9b506c3a1049b61f522957b8f46, type: 2}
+  Point: {fileID: 1394990367}
+  audioSource: {fileID: 1847812621}
 --- !u!1001 &1849291375
 PrefabInstance:
   m_ObjectHideFlags: 0
