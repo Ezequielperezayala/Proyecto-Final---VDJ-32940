@@ -9,12 +9,16 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] Text Score;
     [SerializeField] Slider LifeBar;
+    [SerializeField] GameObject deadScreen;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            PlayerCollision.Ondead += GameOver;
+            PlayerCollision.OnchangeHP += HealBar;
+            PlayerCollision.OnPick += ViewScore;
         }
         else
         {
@@ -23,15 +27,15 @@ public class HUDManager : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
-    public void ViewScore ( string newScore)
+    public void ViewScore(string newScore)
     {
         Score.text = newScore;
     }
@@ -39,5 +43,10 @@ public class HUDManager : MonoBehaviour
     public static void HealBar(int HP)
     {
         instance.LifeBar.value = HP;
+    }
+
+    void GameOver()
+    {
+        deadScreen.SetActive(true);
     }
 }

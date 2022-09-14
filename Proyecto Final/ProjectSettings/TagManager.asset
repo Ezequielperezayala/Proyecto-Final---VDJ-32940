@@ -7,6 +7,7 @@ TagManager:
   - PowerUp
   - Score
   - Weapons
+  - instantDeath
   layers:
   - Default
   - TransparentFX

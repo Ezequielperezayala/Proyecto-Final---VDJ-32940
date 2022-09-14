@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ghost : EnemiesMovement
 {
     [SerializeField] Transform Point;
     [SerializeField] AudioSource audioSource;
+    public UnityEvent SoundActivate;
     
     
     protected override void Update()
@@ -21,7 +23,8 @@ public class Ghost : EnemiesMovement
             {
                 if (hit.transform.CompareTag("Player"))
                 {
-                    audioSource.Play();
+                    SoundActivate?.Invoke();
+                    //audioSource.Play();
                 }
             }
     }
