@@ -24,10 +24,18 @@ public class PlayerCollision : MonoBehaviour
         if (other.tag == "PowerUp")
         {
             Debug.Log("tocaste" + other.gameObject.name);
-            Destroy(other.gameObject);
-            playerData.Healing(10);
             //HUDManager.HealBar(playerData.HP);
             PlayerCollision.OnchangeHP(playerData.Hp);
+            if (playerData.Hp >= 100)
+            {
+                Destroy(other.gameObject);
+                playerData.Healing(0);
+            }
+            else
+            {
+                Destroy(other.gameObject);
+                playerData.Healing(10);
+            }
         }
 
         if (other.tag == "Score")
@@ -49,7 +57,7 @@ public class PlayerCollision : MonoBehaviour
 
         if (other.tag == "instantDeath")
         {
-            playerData.Damage(100);
+            playerData.Damage(40);
             //HUDManager.HealBar(playerData.HP);
             PlayerCollision.OnchangeHP(playerData.Hp);
             Destroy(other.gameObject);

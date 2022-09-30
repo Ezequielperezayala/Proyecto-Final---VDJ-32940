@@ -7,20 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     public void onClickStart()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void onClickExit()
+    {
+        Application.Quit();
     }
 }
