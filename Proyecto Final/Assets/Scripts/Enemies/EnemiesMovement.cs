@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class EnemiesMovement : MonoBehaviour
 {
    
     //variable para determinar mediante el inspector el transform del player
     protected private GameObject Player;
+    protected private NavMeshAgent agente;
+
 
     [SerializeField] protected EnemiesData enemiesData;
 
@@ -14,11 +18,13 @@ public class EnemiesMovement : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+        agente = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        
         Invoke("move", 3f);  
         LookPlayer();
    

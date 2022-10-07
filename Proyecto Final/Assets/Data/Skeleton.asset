@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   velocidad: 5.01
-  distance: 0
+  distance: 5.1

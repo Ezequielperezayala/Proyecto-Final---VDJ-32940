@@ -11,7 +11,9 @@ public class PlayerMoveCC1 : MonoBehaviour
     private Vector3 camForward;
     private Vector3 camRight;
     private Vector3 playerMove;
-    public float fallVelocity;
+    private float fallVelocity;
+    
+
    
     
 
@@ -100,6 +102,18 @@ public class PlayerMoveCC1 : MonoBehaviour
             playerMove.y = fallVelocity;
             playerAnimatorController.SetTrigger("playerJump");
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            playerAnimatorController.SetBool("playerAtack",true);
+            Invoke("DelayAtack", 0.25f);
+            playerAnimatorController.Play("Atack");
+        }
+    }
+
+    void DelayAtack()
+    {
+        playerAnimatorController.SetBool("playerAtack", false);
     }
 
     private void OnAnimatorMove()
