@@ -19,14 +19,6 @@ public class EnemiesData : ScriptableObject
     [Range(0, 10)]
     public float distance;
 
-    [Header("CONFIGURACION DE VIDA")]
-    [Tooltip("100 de Vida")]
-    [SerializeField]
-    public int vida = 100;
-
-    public void Damage(int daño)
-    {
-        vida -= daño;
-    }
+   
 
 }

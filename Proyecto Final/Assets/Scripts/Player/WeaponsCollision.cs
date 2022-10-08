@@ -4,32 +4,23 @@ using UnityEngine;
 
 public class WeaponsCollision : MonoBehaviour
 {
-    EnemiesData enemiesData;
-    public GameObject Enemies;
+    EnemyHeal Enemylive;
     private void Start()
     {
-        Enemies = GameObject.Find("Skeleton");
-        if(Enemies != null)
-        {
-           enemiesData = Enemies.GetComponent<EnemiesData>();
-        }
-        
+           Enemylive = GetComponent<EnemyHeal>();
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)      
     {
         if (other.tag == "Enemies")
         {
-            if (enemiesData.vida == 0) 
+            Debug.Log("Le pegaste al esqueleto");
+
+            Enemylive.Damage(10);
+
+            if (Enemylive.Hp <= 0) 
             { 
-      
                 Destroy(other.gameObject);
             }
-            else
-            {
-                Debug.Log("Lepegaste al esqueleto");
-                enemiesData.Damage(10);
-            }
-
         }
 
     }

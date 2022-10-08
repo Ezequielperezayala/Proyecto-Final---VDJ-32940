@@ -5,34 +5,30 @@ using System;
 
 public class EnemiesCollision : MonoBehaviour
 {
-    EnemiesData enemiesData;
-
-
-
-
-    // Start is called before the first frame update
+    EnemyHeal EnemyLive;
 
     void Start()
     {
-        enemiesData = GetComponent<EnemiesData>();
+        EnemyLive = GetComponent<EnemyHeal>();
     }
 
     private void Update()
     {
-        Debug.Log(enemiesData.vida);
+        Debug.Log(EnemyLive.Hp);
     }
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag =="Weapons")
         {
-            Debug.Log("recibiste daño");
-            if(enemiesData.vida == 0)
+            
+            if(EnemyLive.Hp <= 0)
             {
                 Destroy(gameObject);
             } else
             {
-                enemiesData.Damage(10);
+                Debug.Log("recibiste daño");
+                EnemyLive.Damage(10);
             }
             
         }

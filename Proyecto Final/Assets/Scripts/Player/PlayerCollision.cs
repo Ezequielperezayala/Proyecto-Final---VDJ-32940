@@ -2,11 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class PlayerCollision : MonoBehaviour
 {
     PlayerData playerData;
-   
+
+    [SerializeField]
+    AudioSource Heal;
+
+    [SerializeField]
+    AudioSource Gold;
+
+    [SerializeField]
+    AudioSource GameOver;
+
+    public UnityEvent Soundheal;
+    public UnityEvent SoundGold;
+    public UnityEvent SoundGameOver;
 
     [SerializeField] WeaponsManager weaponManager;
 
@@ -32,11 +45,13 @@ public class PlayerCollision : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 playerData.Healing(0);
+                Soundheal?.Invoke();
             }
             else
             {
                 Destroy(other.gameObject);
                 playerData.Healing(20);
+                Soundheal?.Invoke();
             }
         }
 
@@ -48,6 +63,7 @@ public class PlayerCollision : MonoBehaviour
             Debug.Log("Puntuacion =" + GameManager.Score);
             //HUDManager.instance.ViewScore("" + GameManager.Score);
             PlayerCollision.OnPick("" + GameManager.Score);
+            SoundGold?.Invoke();
         }
 
         if (other.gameObject.CompareTag("Weapons"))
@@ -68,6 +84,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 Debug.Log("Interactuando con Ondead");
                 PlayerCollision.Ondead.Invoke();
+                SoundGameOver?.Invoke();
             }
         }
     }
@@ -81,6 +98,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 PlayerCollision.Ondead.Invoke();
                 playerData.Damage(0);
+                SoundGameOver?.Invoke();
             }
             else
             {
