@@ -6,6 +6,7 @@ using System;
 public class PlayerCollision : MonoBehaviour
 {
     PlayerData playerData;
+   
 
     [SerializeField] WeaponsManager weaponManager;
 
@@ -16,6 +17,7 @@ public class PlayerCollision : MonoBehaviour
     private void Start()
     {
         playerData = GetComponent<PlayerData>();
+       
         //HUDManager.HealBar(playerData.HP);
         PlayerCollision.OnchangeHP(playerData.Hp);
     }
@@ -34,7 +36,7 @@ public class PlayerCollision : MonoBehaviour
             else
             {
                 Destroy(other.gameObject);
-                playerData.Healing(10);
+                playerData.Healing(20);
             }
         }
 
@@ -70,5 +72,24 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "EnemiesAtack")
+        {
+            PlayerCollision.OnchangeHP(playerData.Hp);
+            if (playerData.Hp == 0)
+            {
+                PlayerCollision.Ondead.Invoke();
+                playerData.Damage(0);
+            }
+            else
+            {
+                playerData.Damage(2);
+            }
+
+        }
+
+        
+    }
+
 }

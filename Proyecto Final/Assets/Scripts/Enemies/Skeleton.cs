@@ -18,7 +18,7 @@ public class Skeleton : EnemiesMovement
     {
 
         Vector3 Chase = (Player.transform.position - transform.position);
-        if (Chase.magnitude > 3f && Player != null)
+        if (Chase.magnitude > 4f && Player != null)
         {
             SkeletonRuning.SetBool("Runing", true);
             //transform.position += Chase.normalized * Time.deltaTime * enemiesData.velocidad;
@@ -42,7 +42,7 @@ public class Skeleton : EnemiesMovement
                 SkeletonRuning.SetBool("atack", true);
                 SkeletonRuning.Play("atack");
                 //audioSource.Play();
-                Invoke("DelayAtack", 0.1f);
+                Invoke("DelayAtack", 0.01f);
             }
         }
     }

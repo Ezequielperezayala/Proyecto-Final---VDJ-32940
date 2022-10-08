@@ -8,6 +8,8 @@ TagManager:
   - Score
   - Weapons
   - instantDeath
+  - EnemiesAtack
+  - Enemies
   layers:
   - Default
   - TransparentFX

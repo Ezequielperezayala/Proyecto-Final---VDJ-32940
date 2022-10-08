@@ -465,7 +465,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6086957, y: 1}
+    m_SensorSize: {x: 3.0584552, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -481,7 +481,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15347226}
-  m_LocalRotation: {x: 0.28241897, y: -0.31872135, z: 0.10009867, w: 0.8992422}
+  m_LocalRotation: {x: 0.19769484, y: -0.3266394, z: 0.07006963, w: 0.9215822}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5042,7 +5042,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6086957, y: 1}
+    m_SensorSize: {x: 3.0584552, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5058,7 +5058,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180277936}
-  m_LocalRotation: {x: 0.2986861, y: -0.316853, z: 0.10586429, w: 0.8939707}
+  m_LocalRotation: {x: 0.21438117, y: -0.3253145, z: 0.07598383, w: 0.91784406}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5935,19 +5935,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2133810222149504738, guid: 949ce1035604bd64996ff12112f19191, type: 3}
   m_PrefabInstance: {fileID: 886623571}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &214935358
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214935354}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.19164515, y: 1.1960064, z: 0.17484319}
-  m_Center: {x: 0.0026056767, y: 0.8771165, z: -1.7462762e-15}
 --- !u!1001 &218606378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9497,7 +9484,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6086957, y: 1}
+    m_SensorSize: {x: 3.0584552, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9513,7 +9500,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373947709}
-  m_LocalRotation: {x: 0.31489754, y: -0.31487495, z: 0.11161017, w: 0.8883899}
+  m_LocalRotation: {x: 0.2310408, y: -0.32387853, z: 0.08188854, w: 0.9137927}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12174,7 +12161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 8.57, z: -10.57}
+  m_FollowOffset: {x: 0, y: 5.71, z: -10.57}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -24104,10 +24091,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword12_Red
       objectReference: {fileID: 0}
-    - target: {fileID: 1645786095522272344, guid: 949ce1035604bd64996ff12112f19191, type: 3}
-      propertyPath: m_TagString
-      value: Weapons
-      objectReference: {fileID: 0}
     - target: {fileID: 2133810222149504738, guid: 949ce1035604bd64996ff12112f19191, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -26004,8 +25987,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2986861, y: -0.316853, z: 0.10586426, w: 0.8939707}
-  m_LocalPosition: {x: -0.5409951, y: 8.65, z: 0.6673174}
+  m_LocalRotation: {x: 0.21438119, y: -0.32531452, z: 0.07598382, w: 0.91784406}
+  m_LocalPosition: {x: -0.5409951, y: 5.79, z: 0.6673174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26311,6 +26294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 445642451}
     m_Modifications:
+    - target: {fileID: 5390238308181226447, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8602361153905227493, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -26358,10 +26345,6 @@ PrefabInstance:
     - target: {fileID: 8947079371753237599, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
       propertyPath: m_Name
       value: Sword15_Lava
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947079371753237599, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
-      propertyPath: m_TagString
-      value: Weapons
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
@@ -32229,7 +32212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 8.57, z: -10.57}
+  m_FollowOffset: {x: 0, y: 5.71, z: -10.57}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -32356,7 +32339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 8.57, z: -10.57}
+  m_FollowOffset: {x: 0, y: 5.71, z: -10.57}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -36085,29 +36068,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2822858027306979291, guid: a83907d2fbe391940af701945bd6076e, type: 3}
   m_PrefabInstance: {fileID: 1314915782}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1314936702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8947079371753237599, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
-  m_PrefabInstance: {fileID: 975582242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1314936703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8602361153905227493, guid: 97d88fb9a3565d84daf5fff081fcbb91, type: 3}
   m_PrefabInstance: {fileID: 975582242}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1314936704
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314936702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.30690002, y: 1.5785648, z: 0.13030726}
-  m_Center: {x: -0.005742073, y: 1.2400153, z: -0.000000007450576}
 --- !u!1001 &1319873413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39598,9 +39563,13 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1345610393, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      propertyPath: m_Radius
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 1530497297, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: Live
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_RootOrder
@@ -40062,19 +40031,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8602361153905227493, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
   m_PrefabInstance: {fileID: 1915446967}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1471716898
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471716893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.31414795, y: 1.7977786, z: 0.13030729}
-  m_Center: {x: -0.0056877136, y: 1.1304078, z: 0.000000111758695}
 --- !u!1001 &1475886948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51955,6 +51911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1863225956}
     m_Modifications:
+    - target: {fileID: 2861974549783081180, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8602361153905227493, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -52002,10 +51962,6 @@ PrefabInstance:
     - target: {fileID: 8947079371753237599, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
       propertyPath: m_Name
       value: Sword15_Frost
-      objectReference: {fileID: 0}
-    - target: {fileID: 8947079371753237599, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
-      propertyPath: m_TagString
-      value: Weapons
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dbf24f8a486a5d43aa8eef186e3375d, type: 3}
@@ -54289,7 +54245,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6086957, y: 1}
+    m_SensorSize: {x: 3.0584552, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -54352,11 +54308,11 @@ MonoBehaviour:
   m_BindingMode: 5
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 8.5
+  - m_Height: 5.71
     m_Radius: 10.57
-  - m_Height: 8.57
+  - m_Height: 5.71
     m_Radius: 10.57
-  - m_Height: 8.5
+  - m_Height: 5.71
     m_Radius: 10.57
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
@@ -54371,7 +54327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008502521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5409951, y: 8.65, z: 0.6673174}
+  m_LocalPosition: {x: -0.5409951, y: 5.79, z: 0.6673174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
