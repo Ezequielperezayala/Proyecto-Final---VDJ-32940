@@ -17,7 +17,6 @@ public class Cannon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("PIUM");
             Shoot();
         }
 

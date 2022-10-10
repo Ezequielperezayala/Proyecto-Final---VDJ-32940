@@ -10,6 +10,7 @@ TagManager:
   - instantDeath
   - EnemiesAtack
   - Enemies
+  - Arma
   layers:
   - Default
   - TransparentFX

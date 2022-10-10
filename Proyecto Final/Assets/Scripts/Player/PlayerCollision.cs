@@ -11,6 +11,9 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField]
     AudioSource Heal;
 
+    [SerializeField] 
+    Animator playerAnimatorController;
+
     [SerializeField]
     AudioSource Gold;
 
@@ -102,12 +105,20 @@ public class PlayerCollision : MonoBehaviour
             }
             else
             {
-                playerData.Damage(2);
+                playerAnimatorController.SetBool("Damage", true);
+                playerAnimatorController.Play("Damage");
+                Invoke("DelayDamage", 0.5f);
+                playerData.Damage(1);
             }
 
         }
 
         
+    }
+
+    void DelayDamage()
+    {
+        playerAnimatorController.SetBool("Damage", false);
     }
 
 }

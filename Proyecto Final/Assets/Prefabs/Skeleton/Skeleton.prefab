@@ -205,8 +205,10 @@ GameObject:
   - component: {fileID: 95015863764320770}
   - component: {fileID: -5652751361445817281}
   - component: {fileID: 5768244726534407070}
-  - component: {fileID: 9198079700108522290}
-  - component: {fileID: -1121153923154299593}
+  - component: {fileID: 6675781575281556161}
+  - component: {fileID: -619180482356638737}
+  - component: {fileID: -1771098196268249368}
+  - component: {fileID: 2086445119153628898}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemies
@@ -278,7 +280,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1144028080539786}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.28
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -291,20 +293,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!65 &9198079700108522290
-BoxCollider:
+--- !u!114 &6675781575281556161
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144028080539786}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.66417956, y: 1.9469694, z: 0.5918939}
-  m_Center: {x: 0.015052319, y: 0.96652013, z: 0.021804929}
---- !u!114 &-1121153923154299593
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ebcf29b4491884a90da0b27b47bf92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  damage: 20
+--- !u!114 &-619180482356638737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,6 +320,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Live: 100
+--- !u!136 &-1771098196268249368
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144028080539786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &2086445119153628898
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144028080539786}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &1147489988858412
 GameObject:
   m_ObjectHideFlags: 0

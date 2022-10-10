@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4669778101875308864}
   - component: {fileID: 7433918205971402122}
   - component: {fileID: 1314936704}
-  - component: {fileID: 5390238308181226447}
   m_Layer: 0
   m_Name: Sword15_Lava
   m_TagString: Weapons
@@ -98,16 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.30690002, y: 1.787287, z: 0.13030726}
   m_Center: {x: -0.005742073, y: 1.3443764, z: -0.000000007450575}
---- !u!114 &5390238308181226447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8947079371753237599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f59abefc9d6ae4fbbfd90c665b054b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemies: {fileID: 1144028080539786, guid: 186d1f74b625fa744abf8a07b350ce1d, type: 3}

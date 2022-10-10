@@ -106,7 +106,7 @@ public class PlayerMoveCC1 : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             playerAnimatorController.SetBool("playerAtack",true);
-            Invoke("DelayAtack", 0.25f);
+            Invoke("DelayAtack", 0.01f);
             playerAnimatorController.Play("Atack");
         }
     }

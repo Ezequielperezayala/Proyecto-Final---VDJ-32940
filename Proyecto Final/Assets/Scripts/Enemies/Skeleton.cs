@@ -42,7 +42,7 @@ public class Skeleton : EnemiesMovement
                 SkeletonRuning.SetBool("atack", true);
                 SkeletonRuning.Play("atack");
                 //audioSource.Play();
-                Invoke("DelayAtack", 0.01f);
+                Invoke("DelayAtack", 1f);
             }
         }
     }

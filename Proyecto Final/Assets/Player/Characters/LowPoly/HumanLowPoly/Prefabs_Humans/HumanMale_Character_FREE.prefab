@@ -1102,6 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Heal: {fileID: 0}
   Gold: {fileID: 937834126753764530, guid: 5142a683d65bbf84abea6f07db9099c7, type: 3}
+  GameOver: {fileID: 0}
   Soundheal:
     m_PersistentCalls:
       m_Calls:
@@ -1132,6 +1133,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  SoundGameOver:
+    m_PersistentCalls:
+      m_Calls: []
   weaponManager: {fileID: 0}
 --- !u!114 &1530497297
 MonoBehaviour:
@@ -2286,7 +2290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3677769549844903454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87894416, y: 1.4322821, z: -0.17858744}
+  m_LocalPosition: {x: 0.056, y: 1.4322821, z: 2.35}
   m_LocalScale: {x: 0.050000023, y: 0.04999999, z: 0.049999986}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3341,9 +3345,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8024351493243979244}
+  - component: {fileID: 8864436054712038309}
   m_Layer: 0
   m_Name: jointItemR
-  m_TagString: Untagged
+  m_TagString: Weapons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3363,6 +3368,19 @@ Transform:
   m_Father: {fileID: 3242882747939926295}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8864436054712038309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239723884395685087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34222135, y: 0.29917493, z: 0.24604698}
+  m_Center: {x: 0.020832395, y: 0.02666304, z: 0.011192351}
 --- !u!1 &5275156299876385258
 GameObject:
   m_ObjectHideFlags: 0

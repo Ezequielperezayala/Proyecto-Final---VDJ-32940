@@ -5,33 +5,44 @@ using System;
 
 public class EnemiesCollision : MonoBehaviour
 {
-    EnemyHeal EnemyLive;
+    [SerializeField] Animator Skeleton;
 
-    void Start()
+    public int HP = 100;
+    public int damage = 10;
+
+    private void Start()
     {
-        EnemyLive = GetComponent<EnemyHeal>();
+        Skeleton = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        Debug.Log(EnemyLive.Hp);
-    }
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag =="Weapons")
+        //Debug.Log(other.gameObject.name);
+      
+        if (other.gameObject.tag == "Weapons")
         {
+            HP -= damage;
+            Skeleton.SetBool("Damage", true);
+            Skeleton.Play("Damage");
+            Invoke("DelayDamage", 0.5f);
             
-            if(EnemyLive.Hp <= 0)
+            Debug.Log(HP);
+
+            if (HP <= 0)
             {
-                Destroy(gameObject);
-            } else
-            {
-                Debug.Log("recibiste daño");
-                EnemyLive.Damage(10);
-            }
+                Destroy(gameObject, 1f);
+            } 
             
         }
         
     }
+
+    void DelayDamage()
+    {
+        Skeleton.SetBool("Damage", false);
+    }
+
+
+
+
 }

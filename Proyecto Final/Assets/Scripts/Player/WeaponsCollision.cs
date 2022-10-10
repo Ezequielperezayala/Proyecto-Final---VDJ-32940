@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class WeaponsCollision : MonoBehaviour
 {
+    [SerializeField] GameObject Enemie;
     EnemyHeal Enemylive;
     private void Start()
     {
-           Enemylive = GetComponent<EnemyHeal>();
+           Enemylive = Enemie.GetComponent<EnemyHeal>();
     }
     private void OnTriggerEnter(Collider other)      
     {
-        if (other.tag == "Enemies")
+        if (other.tag == "PowerUp")
         {
             Debug.Log("Le pegaste al esqueleto");
+            Destroy(other.gameObject);
 
-            Enemylive.Damage(10);
+            /*Enemylive.Damage(10);
 
             if (Enemylive.Hp <= 0) 
             { 
                 Destroy(other.gameObject);
-            }
+            }*/
         }
 
     }

@@ -33,4 +33,7 @@ public class Firebolt : MonoBehaviour
     {
         Destroy(gameObject, LiveTime);
     }
+
+
+   
 }

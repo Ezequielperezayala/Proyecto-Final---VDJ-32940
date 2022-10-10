@@ -5,6 +5,9 @@ using UnityEngine;
 public class ActivacionSpawn : MonoBehaviour
 {
     [SerializeField]
+    BoxCollider puerta;
+
+    [SerializeField]
     GameObject Enemigo;
 
     [SerializeField]
@@ -16,13 +19,21 @@ public class ActivacionSpawn : MonoBehaviour
     float DelayTime;
 
     [SerializeField]
-    Transform Spawn;
+    GameObject[] Spawn;
 
     [SerializeField] Transform Point;
 
     [SerializeField] [Range(5, 10)] float distance;
 
     bool canSpawn = true;
+
+
+    private void Start()
+    {
+        
+        puerta = GetComponent<BoxCollider>();
+        puerta.enabled = false;
+    }
 
     /*private void OnTriggerExit(Collider other)
     {
@@ -36,11 +47,23 @@ public class ActivacionSpawn : MonoBehaviour
     private void Update()
     {
         SpawnRayCasting();
+        if (Enemigo == null)
+        {
+            puerta.enabled = false;
+        }
+        
     }
 
     void Enemy()
     {
-        Instantiate(Enemigo, Spawn.transform);
+        Instantiate(Enemigo, Spawn[0].transform);
+        Instantiate(Enemigo, Spawn[1].transform);
+        Instantiate(Enemigo, Spawn[2].transform);
+        Instantiate(Enemigo, Spawn[3].transform);
+        Instantiate(Enemigo, Spawn[4].transform);
+        Instantiate(Enemigo, Spawn[5].transform);
+        Instantiate(Enemigo, Spawn[6].transform);
+        Instantiate(Enemigo, Spawn[7].transform);
     }
 
     void SpawnRayCasting()
@@ -50,6 +73,7 @@ public class ActivacionSpawn : MonoBehaviour
         {
             if (hit.transform.CompareTag("Player") && canSpawn)
             {
+                puerta.enabled = true;
                 Enemy();
                 canSpawn = false;
                 Invoke("DelaySpawn", 3f);
