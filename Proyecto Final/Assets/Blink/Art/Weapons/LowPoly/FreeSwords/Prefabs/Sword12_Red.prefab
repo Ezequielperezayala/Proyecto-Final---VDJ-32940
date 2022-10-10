@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3040785727729074503}
   - component: {fileID: 997544894451840397}
   - component: {fileID: 214935358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword12_Red
   m_TagString: Weapons
   m_Icon: {fileID: 0}

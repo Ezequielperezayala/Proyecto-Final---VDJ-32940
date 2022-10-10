@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.Events;
+using TMPro;
 
 public class ActivacionSpawn : MonoBehaviour
 {
@@ -27,12 +30,15 @@ public class ActivacionSpawn : MonoBehaviour
 
     bool canSpawn = true;
 
+    [SerializeField] float Timer;
+    [SerializeField] TextMeshProUGUI contador;
+    [SerializeField] bool Comienzo;
 
     private void Start()
     {
-        
         puerta = GetComponent<BoxCollider>();
         puerta.enabled = false;
+        Comienzo = false; 
     }
 
     /*private void OnTriggerExit(Collider other)
@@ -40,6 +46,7 @@ public class ActivacionSpawn : MonoBehaviour
         if (other.tag == "Player")
         {
             InvokeRepeating("Enemy", StartTime, DelayTime);
+            
         }
         
     }*/
@@ -47,9 +54,9 @@ public class ActivacionSpawn : MonoBehaviour
     private void Update()
     {
         SpawnRayCasting();
-        if (Enemigo == null)
+        if (Comienzo == true)
         {
-            puerta.enabled = false;
+            Contador();
         }
         
     }
@@ -77,9 +84,14 @@ public class ActivacionSpawn : MonoBehaviour
                 Enemy();
                 canSpawn = false;
                 Invoke("DelaySpawn", 3f);
+                Comienzo = true;
+                
             }
+
+            
         }
     }
+
 
     private void OnDrawGizmos()
     {
@@ -92,4 +104,15 @@ public class ActivacionSpawn : MonoBehaviour
     {
         canSpawn = true;
     }
+
+    void Contador()
+    {
+        Timer -= Time.deltaTime;
+        contador.text = "" + Timer.ToString("f0");
+        if (Timer <= 0)
+        {
+          Timer = 0;
+        }
+    }
+    
 }

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class HUDManager : MonoBehaviour
 {
@@ -11,6 +15,11 @@ public class HUDManager : MonoBehaviour
     [SerializeField] Slider LifeBar;
     [SerializeField] GameObject deadScreen;
 
+    
+
+
+
+
     private void Awake()
     {
         if (instance == null)
@@ -19,6 +28,8 @@ public class HUDManager : MonoBehaviour
             PlayerCollision.Ondead += GameOver;
             PlayerCollision.OnchangeHP += HealBar;
             PlayerCollision.OnPick += ViewScore;
+            DontDestroyOnLoad(gameObject);
+
         }
         else
         {
@@ -27,12 +38,13 @@ public class HUDManager : MonoBehaviour
     }
     void Start()
     {
+        GameManager.Score = 0;
 
     }
 
     void Update()
     {
-
+        
     }
 
     public void ViewScore(string newScore)
@@ -48,5 +60,23 @@ public class HUDManager : MonoBehaviour
     void GameOver()
     {
         deadScreen.SetActive(true);
+        GameManager.Score = 0;
+        HUDManager.instance.ViewScore("" + GameManager.Score);
     }
+
+    public void OnclickRestart()
+    {
+        SceneManager.LoadScene(1);
+        deadScreen.SetActive(false);
+        
+       
+    }
+
+    public void OnclickMenu()
+    {
+        SceneManager.LoadScene(0);
+        deadScreen.SetActive(false);
+    }
+
+    
 }

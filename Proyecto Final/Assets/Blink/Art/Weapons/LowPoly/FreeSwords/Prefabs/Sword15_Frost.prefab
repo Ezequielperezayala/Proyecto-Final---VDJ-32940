@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4669778101875308864}
   - component: {fileID: 7433918205971402122}
   - component: {fileID: 1471716898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword15_Frost
   m_TagString: Weapons
   m_Icon: {fileID: 0}
