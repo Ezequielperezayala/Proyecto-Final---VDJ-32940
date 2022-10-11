@@ -305,6 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ebcf29b4491884a90da0b27b47bf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Skeleton: {fileID: 0}
+  Puerta: {fileID: 3653775632151912800, guid: c90641786fb29ae45b68dccbe9724559, type: 3}
+  ActivacionSpawn: {fileID: 0}
   HP: 100
   damage: 20
 --- !u!114 &-619180482356638737

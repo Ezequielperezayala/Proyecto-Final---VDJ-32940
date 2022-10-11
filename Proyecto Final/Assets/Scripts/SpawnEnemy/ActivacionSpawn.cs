@@ -14,6 +14,9 @@ public class ActivacionSpawn : MonoBehaviour
     GameObject Enemigo;
 
     [SerializeField]
+    GameObject boss;
+
+    [SerializeField]
     [Range(1f, 10f)]
     float StartTime;
 
@@ -24,15 +27,22 @@ public class ActivacionSpawn : MonoBehaviour
     [SerializeField]
     GameObject[] Spawn;
 
+    [SerializeField]
+    GameObject spawnBoss;
+
     [SerializeField] Transform Point;
 
-    [SerializeField] [Range(5, 10)] float distance;
+    [SerializeField] [Range(0, 10)] float distance;
 
     bool canSpawn = true;
 
     [SerializeField] float Timer;
     [SerializeField] TextMeshProUGUI contador;
     [SerializeField] bool Comienzo;
+
+    public int ContadorEnemies = 0;
+
+    
 
     private void Start()
     {
@@ -58,19 +68,27 @@ public class ActivacionSpawn : MonoBehaviour
         {
             Contador();
         }
+
+        
         
     }
 
     void Enemy()
     {
-        Instantiate(Enemigo, Spawn[0].transform);
+        for(int i = 0; i < 10; i++)
+        {
+            Instantiate(Enemigo, Spawn[i].transform);
+            ContadorEnemies ++;
+        }
+        /*Instantiate(Enemigo, Spawn[0].transform);
         Instantiate(Enemigo, Spawn[1].transform);
         Instantiate(Enemigo, Spawn[2].transform);
         Instantiate(Enemigo, Spawn[3].transform);
         Instantiate(Enemigo, Spawn[4].transform);
         Instantiate(Enemigo, Spawn[5].transform);
         Instantiate(Enemigo, Spawn[6].transform);
-        Instantiate(Enemigo, Spawn[7].transform);
+        Instantiate(Enemigo, Spawn[7].transform);*/
+       
     }
 
     void SpawnRayCasting()
@@ -89,6 +107,14 @@ public class ActivacionSpawn : MonoBehaviour
             }
 
             
+        }
+    }
+
+    void ActivateBoss()
+    {
+        if (ContadorEnemies == 0)
+        {
+            Instantiate(boss, spawnBoss.transform);
         }
     }
 
@@ -112,6 +138,7 @@ public class ActivacionSpawn : MonoBehaviour
         if (Timer <= 0)
         {
           Timer = 0;
+          ActivateBoss();
         }
     }
     

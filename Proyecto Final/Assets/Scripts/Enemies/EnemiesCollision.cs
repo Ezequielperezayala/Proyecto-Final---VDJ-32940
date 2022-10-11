@@ -6,6 +6,8 @@ using System;
 public class EnemiesCollision : MonoBehaviour
 {
     [SerializeField] Animator Skeleton;
+    [SerializeField] GameObject Puerta;
+    [SerializeField] ActivacionSpawn ActivacionSpawn;
 
     public int HP = 100;
     public int damage = 10;
@@ -13,6 +15,9 @@ public class EnemiesCollision : MonoBehaviour
     private void Start()
     {
         Skeleton = GetComponent<Animator>();
+        ActivacionSpawn = Puerta.GetComponent<ActivacionSpawn>();
+        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,12 +30,11 @@ public class EnemiesCollision : MonoBehaviour
             Skeleton.SetBool("Damage", true);
             Skeleton.Play("Damage");
             Invoke("DelayDamage", 0.5f);
-            
-            Debug.Log(HP);
-
             if (HP <= 0)
             {
-                Destroy(gameObject, 1f);
+                Destroy(gameObject);
+                ActivacionSpawn.ContadorEnemies --;
+                Debug.Log(ActivacionSpawn.ContadorEnemies);
             } 
             
         }

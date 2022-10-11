@@ -107,7 +107,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 playerAnimatorController.SetBool("Damage", true);
                 playerAnimatorController.Play("Damage");
-                Invoke("DelayDamage", 0.5f);
+                Invoke("DelayDamage", 0.25f);
                 playerData.Damage(1);
             }
 
