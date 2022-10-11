@@ -75,10 +75,9 @@ public class ActivacionSpawn : MonoBehaviour
 
     void Enemy()
     {
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 9; i++)
         {
             Instantiate(Enemigo, Spawn[i].transform);
-            ContadorEnemies ++;
         }
         /*Instantiate(Enemigo, Spawn[0].transform);
         Instantiate(Enemigo, Spawn[1].transform);
@@ -110,14 +109,7 @@ public class ActivacionSpawn : MonoBehaviour
         }
     }
 
-    void ActivateBoss()
-    {
-        if (ContadorEnemies == 0)
-        {
-            Instantiate(boss, spawnBoss.transform);
-        }
-    }
-
+   
 
     private void OnDrawGizmos()
     {
@@ -138,7 +130,6 @@ public class ActivacionSpawn : MonoBehaviour
         if (Timer <= 0)
         {
           Timer = 0;
-          ActivateBoss();
         }
     }
     
